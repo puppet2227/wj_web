@@ -1,0 +1,18 @@
+[2023-01-07 09:48:39] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-07 09:48:39] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-07 09:48:39] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-07 09:48:47] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-07 09:48:47] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-07 09:48:47] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-07 09:49:21] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-01-07 09:49:21] [INFO] [views.py] [line:87] 请求api_module=user，api_name=login
+[2023-01-07 09:49:21] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-01-07 09:49:21] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-07 09:49:21] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-07 09:49:21] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-07 09:50:48] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-07 09:50:48] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-07 09:50:48] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-07 09:54:44] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-07 09:54:44] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-07 09:54:44] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}

@@ -1,0 +1,24 @@
+[2023-01-08 16:22:33] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-08 16:22:33] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-08 16:22:33] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-08 16:49:17] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-08 16:49:17] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-08 16:49:17] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 1, 'title': '111', 'desc': None, 'status': 1}]}
+[2023-01-08 16:51:44] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-01-08 16:51:44] [INFO] [views.py] [line:87] 请求api_module=user，api_name=login
+[2023-01-08 16:51:44] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-01-08 16:51:44] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-08 16:51:44] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-08 16:51:44] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 1, 'title': '111', 'desc': None, 'status': 1}]}
+[2023-01-08 16:54:09] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-08 16:54:09] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-08 16:54:09] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-08 17:00:28] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-08 17:00:28] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-08 17:00:28] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-08 17:00:33] [INFO] [views.py] [line:86] 请求data={'title': 'q1'}
+[2023-01-08 17:00:33] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-08 17:00:33] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'id': 2}
+[2023-01-08 17:00:33] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-08 17:00:33] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-08 17:00:33] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': 'q1', 'desc': None, 'status': 0}]}

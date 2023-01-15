@@ -1,0 +1,9 @@
+[2023-01-11 16:41:04] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-11 16:41:04] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-11 16:41:04] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': 'q1', 'desc': None, 'status': 0}]}
+[2023-01-11 16:41:10] [INFO] [views.py] [line:86] 请求data={'title': '233'}
+[2023-01-11 16:41:10] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-11 16:41:10] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'id': 3}
+[2023-01-11 16:41:10] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-11 16:41:10] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-11 16:41:10] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 3, 'title': '233', 'desc': None, 'status': 0}, {'id': 2, 'title': 'q1', 'desc': None, 'status': 0}]}
