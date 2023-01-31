@@ -1,0 +1,386 @@
+[2023-01-31 13:21:28] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 13:21:28] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 13:21:28] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-31 13:21:32] [INFO] [views.py] [line:86] 请求data={'title': '11'}
+[2023-01-31 13:21:32] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-31 13:21:32] [ERROR] [views.py] [line:92] error
+Traceback (most recent call last):
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'username' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/project/wj_web/WjAdmin/app/views.py", line 88, in api_handle
+    resp = eval(f'api.{api_module}.{api_name}(request, data, resp)')
+  File "<string>", line 1, in <module>
+  File "/home/project/wj_web/WjAdmin/app/api/wj.py", line 25, in add_wj
+    res = Wj.objects.create(username=username, title=title, desc=desc, status=0)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'username' cannot be null")
+[2023-01-31 13:21:34] [INFO] [views.py] [line:86] 请求data={'title': '11'}
+[2023-01-31 13:21:34] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-31 13:21:34] [ERROR] [views.py] [line:92] error
+Traceback (most recent call last):
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'username' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/project/wj_web/WjAdmin/app/views.py", line 88, in api_handle
+    resp = eval(f'api.{api_module}.{api_name}(request, data, resp)')
+  File "<string>", line 1, in <module>
+  File "/home/project/wj_web/WjAdmin/app/api/wj.py", line 25, in add_wj
+    res = Wj.objects.create(username=username, title=title, desc=desc, status=0)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'username' cannot be null")
+[2023-01-31 13:21:34] [INFO] [views.py] [line:86] 请求data={'title': '11'}
+[2023-01-31 13:21:34] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-31 13:21:34] [ERROR] [views.py] [line:92] error
+Traceback (most recent call last):
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'username' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/project/wj_web/WjAdmin/app/views.py", line 88, in api_handle
+    resp = eval(f'api.{api_module}.{api_name}(request, data, resp)')
+  File "<string>", line 1, in <module>
+  File "/home/project/wj_web/WjAdmin/app/api/wj.py", line 25, in add_wj
+    res = Wj.objects.create(username=username, title=title, desc=desc, status=0)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'username' cannot be null")
+[2023-01-31 13:21:39] [INFO] [views.py] [line:86] 请求data={'title': '11'}
+[2023-01-31 13:21:39] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-31 13:21:39] [ERROR] [views.py] [line:92] error
+Traceback (most recent call last):
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'username' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/project/wj_web/WjAdmin/app/views.py", line 88, in api_handle
+    resp = eval(f'api.{api_module}.{api_name}(request, data, resp)')
+  File "<string>", line 1, in <module>
+  File "/home/project/wj_web/WjAdmin/app/api/wj.py", line 25, in add_wj
+    res = Wj.objects.create(username=username, title=title, desc=desc, status=0)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/shiyanlou/.local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'username' cannot be null")
+[2023-01-31 13:22:18] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-01-31 13:22:18] [INFO] [views.py] [line:87] 请求api_module=user，api_name=register
+[2023-01-31 13:22:18] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-01-31 13:22:20] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-01-31 13:22:20] [INFO] [views.py] [line:87] 请求api_module=user，api_name=login
+[2023-01-31 13:22:20] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-01-31 13:22:21] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 13:22:21] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 13:22:21] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-31 13:22:27] [INFO] [views.py] [line:86] 请求data={'title': '11'}
+[2023-01-31 13:22:27] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-31 13:22:27] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'id': 1}
+[2023-01-31 13:22:27] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 13:22:27] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 13:22:27] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-01-31 13:23:55] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 13:23:55] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 13:23:55] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-01-31 13:24:02] [INFO] [views.py] [line:86] 请求data={'title': '22'}
+[2023-01-31 13:24:02] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-01-31 13:24:02] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'id': 2}
+[2023-01-31 13:24:02] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 13:24:02] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 13:24:02] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 0}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-01-31 13:25:27] [INFO] [views.py] [line:86] 请求data={'wj_id': 2, 'status': 1}
+[2023-01-31 13:25:27] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=push_wj
+[2023-01-31 13:25:27] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'status': 1}
+[2023-01-31 13:25:52] [INFO] [views.py] [line:86] 请求data={'wj_id': '2'}
+[2023-01-31 13:25:52] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_info
+[2023-01-31 13:25:52] [INFO] [views.py] [line:86] 请求data={'wj_id': '2'}
+[2023-01-31 13:25:52] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_question_list
+[2023-01-31 13:25:52] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': {'title': '22', 'desc': None, 'status': 1}}
+[2023-01-31 13:25:52] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-31 13:25:57] [INFO] [views.py] [line:86] 请求data={'wj_id': '2', 'use_time': 5, 'answers': {}}
+[2023-01-31 13:25:57] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=submit_wj
+[2023-01-31 13:25:57] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-01-31 13:26:00] [INFO] [views.py] [line:86] 请求data={'wj_id': '2'}
+[2023-01-31 13:26:00] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_info
+[2023-01-31 13:26:00] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': {'title': '22', 'desc': None, 'status': 1}}
+[2023-01-31 13:26:00] [INFO] [views.py] [line:86] 请求data={'wj_id': '2'}
+[2023-01-31 13:26:00] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_question_list
+[2023-01-31 13:26:00] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-31 13:26:01] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 13:26:01] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 13:26:01] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-01-31 13:26:22] [INFO] [views.py] [line:86] 请求data={'wj_id': '2'}
+[2023-01-31 13:26:22] [INFO] [views.py] [line:86] 请求data={'wj_id': '2'}
+[2023-01-31 13:26:22] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_info
+[2023-01-31 13:26:22] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_question_list
+[2023-01-31 13:26:22] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': {'title': '22', 'desc': None, 'status': 1}}
+[2023-01-31 13:26:22] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
