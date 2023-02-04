@@ -183,7 +183,25 @@ export default {
     deleteOption(index) {
       this.qInfo.options.splice(index, 1);
     },
-    
+    addWjHandle() {
+      this.$request({
+        url: "/api/wj/add_wj",
+        method: "post",
+        data: {
+          id: this.wjInfo.id,
+          title: this.wjInfo.title,
+          desc: this.wjInfo.desc,
+        },
+      }).then((data) => {
+        if (this.wjInfo.id) {
+          this.$message.success("保存成功");
+        } else {
+          this.$message.success("添加成功");
+        }
+        this.$emit("initWjList");
+        this.addWjDialogShow = false;
+      });
+    },
   },
 };
 </script>

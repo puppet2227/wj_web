@@ -17,7 +17,7 @@
         <el-tab-pane label="回答统计" name="datashow">
           <div class="card-content" ref="pdf">
             <div v-if="!isSelectWj">请先选择问卷</div>
-            <w-data-show v-else></w-data-show>
+            <w-data-show v-else :wjItem="nowSelect"></w-data-show>
           </div>
         </el-tab-pane>
       </el-tabs>

@@ -1,0 +1,81 @@
+[2023-02-03 14:38:00] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 14:38:00] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 14:38:00] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 14:39:07] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 14:39:07] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 14:39:07] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 14:39:34] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 14:39:34] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 14:39:34] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 14:39:44] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-02-03 14:39:44] [INFO] [views.py] [line:87] 请求api_module=user，api_name=login
+[2023-02-03 14:39:45] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-02-03 14:39:45] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 14:39:45] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 14:39:45] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 14:40:24] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-02-03 14:40:24] [INFO] [views.py] [line:87] 请求api_module=user，api_name=register
+[2023-02-03 14:40:24] [INFO] [views.py] [line:89] resp={'code': 601, 'msg': '用户名已存在'}
+[2023-02-03 14:50:54] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-02-03 14:50:54] [INFO] [views.py] [line:87] 请求api_module=user，api_name=login
+[2023-02-03 14:50:54] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-02-03 14:50:54] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 14:50:54] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 14:50:54] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 14:50:55] [INFO] [views.py] [line:86] 请求data={'wj_id': 2, 'status': 0}
+[2023-02-03 14:50:55] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=push_wj
+[2023-02-03 14:50:55] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'status': 0}
+[2023-02-03 14:51:03] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 14:51:03] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 14:51:03] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 0}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 14:51:04] [INFO] [views.py] [line:86] 请求data={'wj_id': 2, 'status': 1}
+[2023-02-03 14:51:04] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=push_wj
+[2023-02-03 14:51:04] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'status': 1}
+[2023-02-03 15:09:08] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 15:09:08] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 15:09:08] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 16:04:40] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 16:04:40] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 16:04:40] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 16:04:44] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 16:04:44] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 16:04:44] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:06:41] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-02-03 19:06:41] [INFO] [views.py] [line:87] 请求api_module=user，api_name=login
+[2023-02-03 19:06:41] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-02-03 19:06:41] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 19:06:41] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 19:06:41] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:06:48] [INFO] [views.py] [line:86] 请求data={'title': '11'}
+[2023-02-03 19:06:48] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-02-03 19:06:48] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'id': 3}
+[2023-02-03 19:06:48] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 19:06:48] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 19:06:48] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 3, 'title': '11', 'desc': None, 'status': 0}, {'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:07:22] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 19:07:22] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 19:07:22] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 3, 'title': '11', 'desc': None, 'status': 0}, {'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:07:25] [INFO] [views.py] [line:86] 请求data={'id': 3}
+[2023-02-03 19:07:25] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=delete_wj
+[2023-02-03 19:07:25] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-02-03 19:07:25] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 19:07:25] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 19:07:25] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:17:43] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 19:17:43] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 19:17:43] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:17:47] [INFO] [views.py] [line:86] 请求data={'title': '33'}
+[2023-02-03 19:17:47] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=add_wj
+[2023-02-03 19:17:47] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'id': 4}
+[2023-02-03 19:17:47] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 19:17:47] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 19:17:47] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 4, 'title': '33', 'desc': None, 'status': 0}, {'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:17:52] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 19:17:52] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 19:17:52] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 4, 'title': '33', 'desc': None, 'status': 0}, {'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-02-03 19:17:53] [INFO] [views.py] [line:86] 请求data={'wj_id': 4, 'status': 1}
+[2023-02-03 19:17:53] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=push_wj
+[2023-02-03 19:17:53] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'status': 1}
+[2023-02-03 20:08:12] [INFO] [views.py] [line:86] 请求data={}
+[2023-02-03 20:08:12] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-02-03 20:08:12] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 4, 'title': '33', 'desc': None, 'status': 1}, {'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}

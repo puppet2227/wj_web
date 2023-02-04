@@ -106,6 +106,21 @@
 <script>
 import * as echarts from "echarts";
 export default {
+  props: {
+    wjItem: {},
+  },
+  computed: {
+    wjId() {
+      return this.wjItem.id;
+    },
+  },
+  watch: {
+    wjId: {
+      handler(val) {
+        this.initData();
+      },
+    },
+  },
   data() {
     return {
       dialogTableVisible: false,
@@ -117,7 +132,6 @@ export default {
       total: 0,
       tableData: [],
       questionId: 0,
-      wjId: 0,
       exportExcelLoading: false,
       answerText2ExcelQeustionId: 0,
     };
@@ -127,39 +141,37 @@ export default {
   },
   methods: {
     initData() {
-      this.detail = [
-        {
-          title: "23123",
-          result: [
-            {
-              option: "123",
-              count: 0,
-              percent: "0%",
-            },
-            {
-              option: "456",
-              count: 0,
-              percent: "0%",
-            },
-            {
-              option: "3123",
-              count: 0,
-              percent: "0%",
-            },
-          ],
-          type: "radio",
-          questionId: 3116,
+      this.loading = true;
+      this.$request({
+        url: "/api/analysis/data_analysis",
+        method: "post",
+        data: {
+          wjId: this.wjId,
         },
-        {
-          title: "4124124124124124",
-          result: "",
-          type: "text",
-          questionId: 3117,
-        },
-      ];
+      })
+        .then((data) => {
+          this.detail = data.detail;
+          this.loading = false;
+        })
+        .catch((e) => {
+          this.loading = false;
+        });
     },
     // 获取表格数据
-    getTableData() {},
+    getTableData() {
+      this.$request({
+        url: "/api/analysis/get_text_answer_detail",
+        method: "post",
+        data: {
+          questionId: this.questionId,
+          currentPage: this.currentPage,
+          pageSize: this.pageSize,
+        },
+      }).then((data) => {
+        this.tableData = data.detail;
+        this.total = data.total;
+      });
+    },
     sizeChange() {
       this.getTableData();
     },

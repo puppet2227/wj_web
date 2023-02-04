@@ -384,3 +384,21 @@ django.db.utils.IntegrityError: (1048, "Column 'username' cannot be null")
 [2023-01-31 13:26:22] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_question_list
 [2023-01-31 13:26:22] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': {'title': '22', 'desc': None, 'status': 1}}
 [2023-01-31 13:26:22] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-31 16:11:30] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 16:11:30] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 16:11:30] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-01-31 16:11:39] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 16:11:39] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 16:11:39] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-01-31 16:12:14] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 16:12:14] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 16:12:14] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}
+[2023-01-31 16:12:56] [INFO] [views.py] [line:86] 请求data={'wj_id': 1}
+[2023-01-31 16:12:56] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_question_list
+[2023-01-31 16:12:56] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': []}
+[2023-01-31 16:18:18] [INFO] [views.py] [line:86] 请求data={'username': 'park', 'password': '123456'}
+[2023-01-31 16:18:18] [INFO] [views.py] [line:87] 请求api_module=user，api_name=login
+[2023-01-31 16:18:18] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success'}
+[2023-01-31 16:18:18] [INFO] [views.py] [line:86] 请求data={}
+[2023-01-31 16:18:18] [INFO] [views.py] [line:87] 请求api_module=wj，api_name=get_wj_list
+[2023-01-31 16:18:18] [INFO] [views.py] [line:89] resp={'code': 0, 'msg': 'success', 'detail': [{'id': 2, 'title': '22', 'desc': None, 'status': 1}, {'id': 1, 'title': '11', 'desc': None, 'status': 0}]}

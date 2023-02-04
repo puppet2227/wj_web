@@ -103,6 +103,7 @@ export default {
     };
   },
   methods: {
+    // wj-web/src/components/Register.vue
     Register() {
       // 请求前表单验证
       this.$refs.registerForm.validate((valid) => {

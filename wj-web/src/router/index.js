@@ -11,15 +11,16 @@ import Success from "@/views/home/Success.vue";
 
 Vue.use(Router);
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: "/",
-      component: HelloWorld,
+      // component: HelloWorld,
+      redirect: "/home",
     },
     {
       path: "/",
       component: Layout,
-      // 此处配置的路由组件会直接在Layout的router-view部分展示
       children: [
         {
           path: "/login",

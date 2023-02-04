@@ -64,6 +64,7 @@ export default {
     };
   },
   methods: {
+    // wj-web/src/components/Login.vue
     login() {
       // 请求前表单验证
       this.$refs.loginForm.validate((valid) => {

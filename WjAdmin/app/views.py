@@ -38,7 +38,7 @@ def check_no_auth(api_module, api_name):
     校验不需要授权的接口
     """
     # todo 开发测试直接返回True
-    return True
+    #return True
 
     no_auth = NO_AUTH_API.get(api_module, [])
     if '*' in no_auth:

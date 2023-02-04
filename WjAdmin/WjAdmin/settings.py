@@ -147,6 +147,6 @@ USE_TZ = False
 # WjAdmin/WjAdmin/settings.py
 # 不需要授权接口
 NO_AUTH_API = {
-    'user': ['login'],
+    'user': ['login', 'register'],
     'wj': ['get_wj_info', 'get_question_list', 'submit_wj']
 }
